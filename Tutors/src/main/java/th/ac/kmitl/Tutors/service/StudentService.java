@@ -4,9 +4,6 @@ import org.springframework.stereotype.Service;
 import th.ac.kmitl.Tutors.model.Student;
 import th.ac.kmitl.Tutors.model.StudentRepository;
 
-import javax.annotation.PostConstruct;
-import java.sql.SQLClientInfoException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 

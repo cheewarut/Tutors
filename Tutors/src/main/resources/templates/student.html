@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+
+<div class="container" layout:fragment="content">
+    <h1>Register Student</h1>
+    <form action="#" th:action="@{/student}" method="POST">
+        <div class="form-group">
+            <label for="inputId">Id</label>
+            <input type="input" class="form-control" name="id" id="inputId">
+        </div>
+
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="input" class="form-control" name="name" id="inputName">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>
+    <hr>
+
+    <h1>All Students</h1>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student: ${allStudents}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
